@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background-color: red;
+    height: 100vh;
+    display: flex;
+}
+.part1{
+    background-color: blue;
+    height: 100vh;
+    flex: 1;
+}
+.part2{
+    background-color: green;
+    height: 100vh;
+    flex: 5;
+    display: flex;
+    gap: 14px;   
+    padding: 10px 40px 8px 20px;  
+}
+.pj{
+    background-color: antiquewhite;
+    height: 100px;
+}
+
+
+.pj img{
+    height: inherit;
+}
+
+.part2 .pj img{
+    height: 10px;
+}
+
+
+.bulat{
+    background-color: aliceblue;
+    border-radius: 50%;
+    height: 100px;
+}
+.bulat img{
+    height: inherit;
+}
