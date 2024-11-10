@@ -1,18 +1,18 @@
 import React from "react";
 
-export default function Player({ name, symbol }) {
+export default function Player({ name, symbol, active }) {
   const [isEditing, setEditing] = React.useState(false);
-  const [player,setPlayer] = React.useState(name)
+  const [player, setPlayer] = React.useState(name);
 
-  function handlePlayer(e){
-    setPlayer(e.target.value)
+  function handlePlayer(e) {
+    setPlayer(e.target.value);
   }
   function handleEditClick() {
-    setEditing(Editing=>!Editing);
+    setEditing((Editing) => !Editing);
   }
 
   return (
-    <li>
+    <li className={active ? "active" : undefined}>
       <span className="player">
         {isEditing ? (
           // onChange for we get the value from input
