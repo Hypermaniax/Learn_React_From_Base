@@ -49,6 +49,7 @@ export default function AuthInputs() {
 
   function handleInputChange(identifier, value) {
     if (identifier === "email") {
+
       setEnteredEmail(value);
     } else {
       setEnteredPassword(value);
