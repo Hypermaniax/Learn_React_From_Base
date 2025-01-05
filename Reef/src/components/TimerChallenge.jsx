@@ -10,9 +10,12 @@ export default function TimerChallenge({ title, targetTime }) {
   const timeisActive = timeRemaining > 0 && timeRemaining < targetTime * 1000;
 
   if (timeRemaining <= 0) {
-    setTimeremaining(targetTime * 1000);
     dialog.current.open();
     clearInterval(timer.current);
+  }
+
+  function handleReset() {
+    setTimeremaining(targetTime * 1000);
   }
 
   function handleStart() {
@@ -28,7 +31,12 @@ export default function TimerChallenge({ title, targetTime }) {
 
   return (
     <>
-      <ResultModal ref={dialog} result="Lose" targetTime={targetTime} />
+      <ResultModal
+        ref={dialog}
+        remainingTime={timeRemaining}
+        targetTime={targetTime}
+        onReset={handleReset}
+      />
       <section className="challenge">
         <h2>{title}</h2>
         <p className="challenge-time">
