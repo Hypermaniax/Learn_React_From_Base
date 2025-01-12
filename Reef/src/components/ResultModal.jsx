@@ -14,7 +14,7 @@ const ResultModal = forwardRef(function ResultModal(
     return {
       open() {
         dialog.current.showModal();
-      },
+      },  
     };
   });
 
